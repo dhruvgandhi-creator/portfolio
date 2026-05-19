@@ -110,19 +110,38 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>QR Code Security System with Phishing Detection</h3>
-      <p>Secure QR validation, phishing detection, logging system.</p>
-      <a href="https://github.com/dhruvgandhi-creator/qr-security" class="btn" target="_blank">View Project</a>
-    </div>
-    <div class="card">
-      <h3>AI-Based Resume Screening & Candidate Assessment</h3>
-      <p>NLP for resume parsing, compatibility scoring, candidate evaluation.</p>
-      <a href="https://github.com/dhruvgandhi-creator/ai-resume-screening" class="btn" target="_blank">View Project</a>
-    </div>
-  </section>
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>QR Code Security System with Phishing Detection</h3>
+    <button class="btn" onclick="toggleDescription('qr-desc', this)">View Project Description</button>
+    <p id="qr-desc" style="display:none;">
+      Secure QR validation, phishing detection, logging system.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>AI-Based Resume Screening & Candidate Assessment</h3>
+    <button class="btn" onclick="toggleDescription('ai-desc', this)">View Project Description</button>
+    <p id="ai-desc" style="display:none;">
+      NLP for resume parsing, compatibility scoring, candidate evaluation.
+    </p>
+  </div>
+</section>
+
+<script>
+  function toggleDescription(id, btn) {
+    const desc = document.getElementById(id);
+    if (desc.style.display === "none") {
+      desc.style.display = "block";
+      btn.textContent = "Hide Project Description";
+    } else {
+      desc.style.display = "none";
+      btn.textContent = "View Project Description";
+    }
+  }
+</script>
 
   <!-- Certifications -->
   <section id="certifications">
