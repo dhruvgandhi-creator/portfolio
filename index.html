@@ -112,24 +112,89 @@
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="card">
       <h3>QR Code Security System with Phishing Detection</h3>
-      <p>Secure QR validation, phishing detection, logging system.</p>
-      <a href="https://github.com/dhruvgandhi-creator/qr-security" class="btn" target="_blank">View Project</a>
+      <button class="btn" onclick="toggleDescription('qr-desc', this)">View Project Description</button>
+      <p id="qr-desc" style="display:none;">
+        Secure QR validation, phishing detection, logging system.
+      </p>
     </div>
+
     <div class="card">
       <h3>AI-Based Resume Screening & Candidate Assessment</h3>
-      <p>NLP for resume parsing, compatibility scoring, candidate evaluation.</p>
-      <a href="https://github.com/dhruvgandhi-creator/ai-resume-screening" class="btn" target="_blank">View Project</a>
+      <button class="btn" onclick="toggleDescription('ai-desc', this)">View Project Description</button>
+      <p id="ai-desc" style="display:none;">
+        NLP for resume parsing, compatibility scoring, candidate evaluation.
+      </p>
     </div>
   </section>
+
+  <script>
+    function toggleDescription(id, btn) {
+      const desc = document.getElementById(id);
+      if (desc.style.display === "none") {
+        desc.style.display = "block";
+        btn.textContent = "Hide Project Description";
+      } else {
+        desc.style.display = "none";
+        btn.textContent = "View Project Description";
+      }
+    }
+  </script>
 
   <!-- Certifications -->
   <section id="certifications">
     <h2>Certifications</h2>
-    <!-- Certification cards remain unchanged -->
-    <!-- ... -->
-  </section>
+
+    <div class="card cert-card">
+      <img src="mad-about-sports-logo.png" alt="Mad About Sports Logo" class="cert-logo">
+      <div>
+        <p>Cricket Analytics – Mad About Sports</p>
+        <a href="cricket-cert.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+      <img src="iit-bombay-logo.png" alt="IIT Bombay Logo" class="cert-logo">
+      <div>
+        <p>Artificial Intelligence – IIT Bombay (Techfest)</p>
+        <a href="AI IITB.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+      <img src="iit-bombay-logo.png" alt="IIT Bombay Logo" class="cert-logo">
+      <div>
+        <p>Personal Finance & Risk Management – IIT Bombay (Techfest)</p>
+        <a href="finance-cert.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+      <img src="rubiscape-logo.png" alt="Rubiscape Logo" class="cert-logo">
+      <div>
+        <p>Data Engineering – Foundation (Rubiscape)</p>
+        <a href="rubiscape-cert1.jpeg" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+      <img src="rubiscape-logo.png" alt="Rubiscape Logo" class="cert-logo">
+      <div>
+        <p>Data Science – Foundation (Rubiscape)</p>
+        <a href="rubiscape-cert3.jpeg" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+
+    <div class="card cert-card">
+      <img src="rubiscape-logo.png" alt="Rubiscape Logo" class="cert-logo">
+      <div>
+        <p>Data Visualization – Foundation (Rubiscape)</p>
+        <a href="rubiscape-cert2.jpeg" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+  
 
   <!-- Contact -->
   <section id="contact">
